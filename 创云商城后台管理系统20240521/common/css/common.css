@@ -1,0 +1,50 @@
+div{
+	box-sizing: border-box;
+}
+.clamp {
+	/* #ifdef APP-PLUS-NVUE */
+	lines: 1;
+	/* #endif */
+	/* #ifndef APP-PLUS-NVUE */
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	display: block;
+	/* #endif */
+}
+.clamp2 {
+	/* #ifdef APP-PLUS-NVUE */
+	lines: 2;
+	/* #endif */
+	/* #ifndef APP-PLUS-NVUE */
+	display: -webkit-box;
+	-webkit-box-orient: vertical;
+	-webkit-line-clamp: 2;
+	overflow: hidden;
+	/* #endif */
+}
+
+/* 布局 */
+.row{
+	/* #ifndef APP-PLUS-NVUE */
+	display:flex;
+	/* #endif */
+	flex-direction:row;
+	align-items: center;
+}
+.column{
+	/* #ifndef APP-PLUS-NVUE */
+	display:flex;
+	/* #endif */
+	flex-direction: column;
+}
+.center{
+	/* #ifndef APP-PLUS-NVUE */
+	display:flex;
+	/* #endif */
+	align-items: center;
+	justify-content: center;
+}
+.fill{
+	flex: 1;
+}

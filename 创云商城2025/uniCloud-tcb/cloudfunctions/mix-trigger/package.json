@@ -1,0 +1,25 @@
+{
+    "name": "mix-trigger",
+    "version": "1.0.0",
+    "description": "定时触发云函数",
+    "main": "index.js",
+    "author": "yt",
+    "license": "ISC",
+    "cloudfunction-config": {
+        "memorySize": 256,
+        "timeout": 100,
+        "triggers": [
+            {
+                "name": "mixFMTrigger",
+                "type": "timer",
+                "config": "0 *\/3 * * * * *"
+            }
+        ],
+        "path": "",
+        "runtime": "Nodejs8"
+    },
+    "origin-plugin-dev-name": "mix-guoyunshop",
+    "origin-plugin-version": "1.1.1",
+    "plugin-dev-name": "mix-guoyunshop",
+    "plugin-version": "1.1.1"
+}

@@ -1,0 +1,20 @@
+{
+    "name": "mix-address",
+    "version": "1.0.0",
+    "description": "用户收货地址",
+    "main": "index.js",
+    "author": "yt",
+    "license": "ISC",
+    "dependencies": {
+        "uni-id": "file:..\/..\/..\/uni_modules\/uni-id\/uniCloud\/cloudfunctions\/common\/uni-id"
+    },
+    "cloudfunction-config": {
+        "memorySize": 256,
+        "timeout": 20,
+        "runtime": "Nodejs8"
+    },
+    "origin-plugin-dev-name": "mix-guoyunshop",
+    "origin-plugin-version": "1.1.1",
+    "plugin-dev-name": "mix-guoyunshop",
+    "plugin-version": "1.1.1"
+}

@@ -1,0 +1,23 @@
+{
+    "name": "mix-admin",
+    "version": "1.0.0",
+    "description": "后台管理",
+    "main": "index.js",
+    "author": "yt",
+    "license": "ISC",
+    "dependencies": {
+        "config": "file:..\/common\/config",
+        "node-xlsx": "^0.17.2",
+        "uni-id-admin": "file:..\/common\/uni-id-admin",
+        "unipay": "file:..\/common\/unipay"
+    },
+    "cloudfunction-config": {
+        "memorySize": 1024,
+        "timeout": 20,
+        "runtime": "Nodejs8"
+    },
+    "origin-plugin-dev-name": "mix-guoyunshop",
+    "origin-plugin-version": "1.1.1",
+    "plugin-dev-name": "mix-guoyunshop",
+    "plugin-version": "1.1.1"
+}

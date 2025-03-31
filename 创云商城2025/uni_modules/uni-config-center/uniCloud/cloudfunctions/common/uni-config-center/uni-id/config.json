@@ -1,0 +1,29 @@
+{
+	"passwordSecret": "passwordSecret-demo",
+	"tokenSecret": "tokenSecret-demo",
+	"tokenExpiresIn": 2592000,
+	"passwordErrorLimit": 7,
+	"passwordErrorRetryTime": 3600,
+	"autoSetInviteCode": true,
+	"app-plus": {
+		"tokenExpiresIn": 2592000,
+		"oauth": {
+			"weixin": {
+					"appid": "wxc47cda2daf13efa3",
+					"appsecret": "f626f8f7b5be09cbb7b4fce2594b9077"
+			},
+			"apple": {
+				"bundleId": ""
+			}
+		}
+	},
+	"mp-weixin": {
+		"tokenExpiresIn": 259200,
+		"oauth": {
+			"weixin": {
+					"appid": "wxc47cda2daf13efa3",
+									"appsecret": "f626f8f7b5be09cbb7b4fce2594b9077"	
+			}
+		}
+	}
+}

@@ -1,0 +1,14 @@
+{
+    "name": "uni-id-admin",
+    "version": "1.1.1",
+    "description": "uni-id for uniCloud",
+    "main": "index.js",
+    "scripts": {},
+    "keywords": [],
+    "author": "",
+    "license": "Apache-2.0",
+    "origin-plugin-dev-name": "mix-guoyunshop",
+    "origin-plugin-version": "1.1.1",
+    "plugin-dev-name": "mix-guoyunshop",
+    "plugin-version": "1.1.1"
+}

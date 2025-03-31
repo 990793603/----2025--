@@ -1,0 +1,22 @@
+{
+    "name": "mix-sms",
+    "version": "1.0.0",
+    "description": "发送短信",
+    "main": "index.js",
+    "author": "yt",
+    "license": "ISC",
+    "cloudfunction-config": {
+        "runtime": "Nodejs12"
+    },
+    "dependencies": {
+        "@alicloud\/pop-core": "^1.7.9",
+        "config": "file:..\/common\/config"
+    },
+    "extensions": {
+        "uni-cloud-sms": {}
+    },
+    "origin-plugin-dev-name": "mix-guoyunshop",
+    "origin-plugin-version": "1.1.1",
+    "plugin-dev-name": "mix-guoyunshop",
+    "plugin-version": "1.1.1"
+}

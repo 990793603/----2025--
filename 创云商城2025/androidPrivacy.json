@@ -1,0 +1,27 @@
+{
+	"version": "1",
+	"prompt": "template",
+	"title": "服务协议和隐私政策",
+	"message": "感谢您使用我们的产品和服务！<br/><br/>我们依据最新的法律法规、监管政策要求，制定了“用户服务协议”和“隐私政策”，请您仔细阅读并充分理解相关条款。<br/><br/>您可通过<a href=\"static/html/serviceAgreement.html\">《服务协议》</a>和<a href=\"static/html/privateAgreement.html\">《隐私政策》</a>了解详细信息。您点击“同意”，即表示您已同意相关条款，我们将尽全力保障您的合法权益并持续为您提供优质的产品和服务。",
+	"buttonAccept": "同意并继续",
+	"buttonRefuse": "暂不同意",
+	"second": {
+		"title": "确认提示",
+		"message": "我们将按照“用户服务协议”和“隐私政策”的内容为您提供服务。<br/><br/>您可通过<a href=\"static/html/serviceAgreement.html\">《服务协议》</a>和<a href=\"static/html/privateAgreement.html\">《隐私政策》</a>了解详细信息。如您不同意上述协议，您可以点击“不同意”后退出应用。",
+		"buttonAccept": "同意并继续",
+		"buttonRefuse": "不同意并退出"
+	},
+	"styles": {
+		"backgroundColor": "#FFFFFF",
+		"borderRadius": "10px",
+		"title": {
+			"color": "#000000"
+		},
+		"buttonAccept": {
+			"color": "#0404FF"
+		},
+		"buttonRefuse": {
+			"color": "#888888"
+		}
+	}
+}
