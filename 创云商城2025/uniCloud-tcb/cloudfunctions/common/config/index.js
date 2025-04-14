@@ -4,7 +4,7 @@ const fs = require("fs");
 
 module.exports = {
 	openExamine: true, //小程序开启审核时隐藏部分模块使用, 提交审核设置为ture隐藏违规模块
-	appName: '创云商城', //应用名称
+	appName: '农里田间鲜配中心', //应用名称
 	//微信小程序端对应的微信支付及登录配置配置
 	wxConfigMp: {
 		appId: 'wxc47cda2daf13efa3',

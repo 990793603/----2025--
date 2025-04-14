@@ -23,6 +23,7 @@
 			<el-table-column prop="image" label="分类图片">
 				<image class="cate-pic" :class="{small: scope.row.parent_id}" slot-scope="scope" :src="scope.row.image" mode="aspectFill"></image>
 			</el-table-column>
+			
 			<el-table-column prop="sort" label="排序" width="150" align="center"></el-table-column>
 			<el-table-column prop="status" label="是否启用" width="190" align="center">
 				<el-switch slot-scope="scope" v-model="scope.row.status" :width="36" :active-value="1" :inactive-value="0" @change="stateChange(scope.$index,scope.row)"></el-switch>

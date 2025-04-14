@@ -3,7 +3,7 @@
  */
 
 export default {
-	appName: '张寨农里商城演示',
+	appName: '农里田间鲜配中心演示',
 	qqmapWxKey: '3TXBZ-2VXCP-NWFD7-VSNYY-NGU7T-WJB3Z', //腾讯地图key，申请地址 https://lbs.qq.com/
 	mpWxOrgId: '', //微信小程序原始id，用于App分享到微信小程序, 无App或无微信小程序不填
 	//阿里云短信配置模板code，如果使用uniSms不需要配置

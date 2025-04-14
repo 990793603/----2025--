@@ -1,7 +1,9 @@
 <template>
     <el-dialog class="dialog" :title="formTitle" :close-on-click-modal="false" :visible.sync="formVisible">
         <el-form ref="dataForm" :rules="rules" :model="formData" label-position="left" label-width="100px" style="width: 400px; margin-left:50px;">
-
+		<el-form-item label="商品id" prop="cate_id">
+		    {{formData._id}}
+		</el-form-item>
             <el-form-item label="产品分类" prop="cate_id">
                 <el-select v-model="formData.cate_id" filterable default-first-option placeholder="请选择产品分类">
                     <el-option v-for="item in cateList" :key="item._id" :disabled="!item.parent_id" :label="item.renderName" :value="item._id"></el-option>

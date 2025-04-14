@@ -1,6 +1,6 @@
 {
     "id": "mix-guoyunshop",
-    "displayName": "张寨农里商城",
+    "displayName": "农里田间鲜配中心",
     "version": "1.1.1",
     "description": "基于uniapp+uniCloud开发的单商户完整商城应用，提供完整用户端和后台源码及示例，支持Android、Ios、微信小程序，提供完整的购物流程及分销返佣等功能。",
     "keywords": [
@@ -103,5 +103,5 @@
 	"extends" : []
     },
     "repository": "",
-    "name": "张寨农里商城"
+    "name": "农里田间鲜配中心"
 }
