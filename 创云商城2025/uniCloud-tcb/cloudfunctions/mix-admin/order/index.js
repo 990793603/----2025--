@@ -642,6 +642,7 @@ const modal = {
 	 * @param {Number} params.outRefundNo 商户退款单号退款单号
 	 */
 	async refund(params, ext){
+		console.log("我在这");
 		const {uid, order, money, outRefundNo, transaction} = params;
 		//余额退款
 		if(order.pay_type === 'balance'){
@@ -679,13 +680,14 @@ const modal = {
 		}
 		const refundFee = (money * 100).toFixed(0);
 		try {
+			console.log('这里');
 			const res = await uniPayInstance.refund({
 			    outTradeNo: order.order_number,
 			    outRefundNo, // 支付宝可不填此项
 			    totalFee: refundFee, // 订单总金额，支付宝可不填此项
 			    refundFee: refundFee, // 退款总金额
 			})
-			
+			console.log(res);
 			if((res.returnCode === 'SUCCESS' && res.resultCode === 'SUCCESS') || res.errMsg === 'Success'){
 				return {
 					status: 1
@@ -697,6 +699,7 @@ const modal = {
 				}
 			}
 		}catch(err){
+			console.log(err);
 			return {
 				status: 0,
 				msg: '退款遇到问题，请稍候再试',

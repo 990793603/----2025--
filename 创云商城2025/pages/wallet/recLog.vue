@@ -39,6 +39,17 @@
 			</view>
 			<!-- #endif -->
 			
+			<view class="recharge-rules" v-if="regList.length > 0">
+				<view class="rules-title">
+					<text class="f-b">充值优惠规则</text>
+				</view>
+				<view class="rules-list">
+					<view class="rule-item" v-for="(rule, index) in regList" :key="index">
+						<text class="rule-text">单笔充值满<text style="color: #ff546f;">{{ rule.money }}</text>元，送<text style="color: #ff546f;">{{ rule.song }}</text>元</text>
+					</view>
+				</view>
+			</view>
+			
 			<mix-button ref="confirmBtn" text="确认充值" marginTop="80rpx" @onConfirm="confirm"></mix-button>
 		</view>
 		
@@ -58,6 +69,7 @@
 		},
 		data() {
 			return {
+				regList: [],
 				curType: 'wxpay',
 				moneyList: [
 					{money: 50, checked: true},
@@ -67,6 +79,12 @@
 				],
 				money: '',
 				payPrice: 0,
+				rechargeRules: [
+					{text: '单笔充值满100元立减10元'},
+					{text: '单笔充值满200元立减25元'},
+					{text: '单笔充值满500元立减70元'},
+					{text: '单笔充值满1000元立减150元'}
+				]
 			}
 		},
 		computed: {
@@ -83,7 +101,8 @@
 				}
 			}
 		},
-		onLoad() {
+	onLoad() {
+		this.getMoneyList();
 			if(!this.openExamine){
 				uni.setNavigationBarTitle({
 					title: '余额充值'
@@ -94,7 +113,15 @@
 				})
 			}
 		},
-		methods: {
+	methods: {
+		async getMoneyList() { 
+			 let res = await this.$request('payment', 'getMoneyList', {
+				
+				}, {showLoading: true})
+			console.log(res);
+				this.regList = res.data;
+				
+		},
 			confirm(){
 				let {curType, moneyList, money} = this;
 				const mIndex = moneyList.findIndex(item=> item.checked);
@@ -258,5 +285,42 @@
 		}
 	}
 
-
+	.recharge-rules {
+		margin: 20rpx 40rpx;
+		
+		.rules-title {
+			font-size: 28rpx;
+			color: #333;
+			margin-bottom: 20rpx;
+		}
+		
+		.rules-list {
+			background: #f8f8f8;
+			border-radius: 12rpx;
+			padding: 20rpx;
+			
+			.rule-item {
+				line-height: 1.8;
+				font-size: 26rpx;
+				color: #666;
+				
+				.rule-text {
+					position: relative;
+					padding-left: 20rpx;
+					
+					&::before {
+						content: '';
+						position: absolute;
+						left: 0;
+						top: 50%;
+						transform: translateY(-50%);
+						width: 8rpx;
+						height: 8rpx;
+						background: $base-color;
+						border-radius: 50%;
+					}
+				}
+			}
+		}
+	}
 </style>

@@ -199,6 +199,11 @@ const payByUnipay = async (param, ext)=>{
 }
 
 const modal = {
+
+	async getMoneyList(request, ext){
+		let res = await db.collection('mix-money-list').get();
+		return res;
+	},
 	/**
 	 * 用户余额充值
 	 * @param {Object} request
@@ -222,13 +227,27 @@ const modal = {
 			}
 		}
 		const order_number = createRandomNo();
+		const regList = await db.collection('mix-money-list').get();
+		let song=0
+		if (regList.data.length) {
+			regList.data.forEach(item => {
+				if (money >= item.money) {
+					song=item.song
+				}
+			});
+		}
+		console.log(song);
+		
+		console.log(money);
+		let resSong=money+song
 		const data = {
 			order_number,
 			uid,
-			money,
+			money:money,
 			price_data: {
-				pay_price: money
+				pay_price: money 
 			},
+			resSong:resSong,
 			pay_type: pay_type,
 			platform: ext.context.PLATFORM,
 			add_time: +new Date(),

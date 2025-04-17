@@ -110,8 +110,12 @@ exports.main = async (event, context) => {
 			await transaction.rollback()
 			return {}
 		}
+		let newMoney=orderDetail.price_data.pay_price
+		if (orderDetail.resSong && orderDetail.resSong > 0) {
+			newMoney=orderDetail.resSong
+		 }
 		res = await transaction.collection('mix-uni-id-users').doc(orderDetail.uid).update({
-			money: db.command.inc(+orderDetail.price_data.pay_price)
+			money: db.command.inc(+newMoney)
 		})
 		if(res.updated !== 1){
 			await transaction.rollback()
@@ -123,7 +127,7 @@ exports.main = async (event, context) => {
 			title: '余额充值-' + (payType === 'wxpay' ? '微信' : '支付宝'), 
 			type: 'recharge',
 			add_time: + new Date,
-			money: +orderDetail.price_data.pay_price,
+			money: +newMoney,
 			username: userData.data[0].username,
 			pay_type: payType
 		})

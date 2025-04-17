@@ -3,14 +3,14 @@
 const fs = require("fs");
 
 module.exports = {
-	openExamine: true, //小程序开启审核时隐藏部分模块使用, 提交审核设置为ture隐藏违规模块
+	openExamine: false, //小程序开启审核时隐藏部分模块使用, 提交审核设置为ture隐藏违规模块
 	appName: '农里田间鲜配中心', //应用名称
 	//微信小程序端对应的微信支付及登录配置配置
 	wxConfigMp: {
 		appId: 'wxc47cda2daf13efa3',
 		secret: 'f626f8f7b5be09cbb7b4fce2594b9077',
 		mchId: '1670461728',
-		key: 'H6fg7GD7Vg62145DgF6906UrbMP06Fas',
+		key: '33445210033445210033445210033445',
 		pfx: fs.readFileSync(__dirname + '/cert/apiclient_cert.p12')
 	},
 	// App端对应的微信支付配置
@@ -18,7 +18,7 @@ module.exports = {
 		appId: 'wxc47cda2daf13efa3',
 		secret: 'f626f8f7b5be09cbb7b4fce2594b9077',
 		mchId: '1670461728',
-		key: 'H6fg7GD7Vg62145DgF6906UrbMP06Fas',
+		key: '33445210033445210033445210033445',
 	},
 	// 支付宝小程序端对应的支付宝支付及登录配置
 	aliConfigMp: {

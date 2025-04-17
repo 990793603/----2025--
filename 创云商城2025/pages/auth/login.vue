@@ -90,7 +90,7 @@
 		data(){
 			return {
 				canUseAppleLogin: false,
-				agreement: true,
+				agreement: false,
 				username: '',
 				pwd: '',
 			}
